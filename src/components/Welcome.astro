@@ -1,210 +1,324 @@
 ---
-import astroLogo from '../assets/astro.svg';
-import background from '../assets/background.svg';
+import Logo from "./Logo.astro";
+import ObrasaLogo from "./ObrasaLogo.astro";
 ---
+<div class="flex w-full flex-col items-center justify-center pb-16">
+  <!-- Hero Section with animated gradient -->
+  <div class="relative w-full py-24 px-6 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-charcoal to-slate opacity-90"></div>
+	<ObrasaLogo class="w-1/4 mx-auto" fill="#E44725" background="transparent" />
+    <div class="relative max-w-5xl mx-auto text-center z-10">
+      <span class="inline-block px-3 py-1 mb-6 text-sm font-medium rounded-full border border-orange text-orange">Mutation Testing. Redefined.</span>
+      <h1 class="font-display text-5xl md:text-6xl font-bold mb-6 leading-tight">Find Blind Spots in Your Test Suite</h1>
+      <p class="text-xl md:text-2xl mb-10 max-w-3xl mx-auto">Obrasa identifies vulnerabilities your tests miss by systematically mutating your code and exposing gaps in coverage.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+        <button class="rounded-lg border border-orange bg-orange py-3 px-8 font-medium text-white transition-all hover:bg-ember hover:shadow-lg hover:shadow-orange/20 active:bg-ember/80 disabled:opacity-50">Try Free for 14 Days</button>
+        <button class="rounded-lg bg-slate/50 backdrop-blur-sm py-3 px-8 font-medium text-white border border-ash/30 transition-all hover:bg-slate hover:border-ash hover:shadow-lg active:bg-slate/80 disabled:opacity-50">View Live Demo</button>
+      </div>
+      <p class="text-ash text-sm">No credit card required. Cancel anytime.</p>
+    </div>
+  </div>
 
-<div id="container">
-	<img id="background" src={background.src} alt="" fetchpriority="high" />
-	<main>
-		<section id="hero">
-			<a href="https://astro.build"
-				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
-			>
-			<h1>
-				To get started, open the <code><pre>src/pages</pre></code> directory in your project.
-			</h1>
-			<section id="links">
-				<a class="button" href="https://docs.astro.build">Read our docs</a>
-				<a href="https://astro.build/chat"
-					>Join our Discord <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.14 96.36"
-						><path
-							fill="currentColor"
-							d="M107.7 8.07A105.15 105.15 0 0 0 81.47 0a72.06 72.06 0 0 0-3.36 6.83 97.68 97.68 0 0 0-29.11 0A72.37 72.37 0 0 0 45.64 0a105.89 105.89 0 0 0-26.25 8.09C2.79 32.65-1.71 56.6.54 80.21a105.73 105.73 0 0 0 32.17 16.15 77.7 77.7 0 0 0 6.89-11.11 68.42 68.42 0 0 1-10.85-5.18c.91-.66 1.8-1.34 2.66-2a75.57 75.57 0 0 0 64.32 0c.87.71 1.76 1.39 2.66 2a68.68 68.68 0 0 1-10.87 5.19 77 77 0 0 0 6.89 11.1 105.25 105.25 0 0 0 32.19-16.14c2.64-27.38-4.51-51.11-18.9-72.15ZM42.45 65.69C36.18 65.69 31 60 31 53s5-12.74 11.43-12.74S54 46 53.89 53s-5.05 12.69-11.44 12.69Zm42.24 0C78.41 65.69 73.25 60 73.25 53s5-12.74 11.44-12.74S96.23 46 96.12 53s-5.04 12.69-11.43 12.69Z"
-						></path></svg
-					>
-				</a>
-			</section>
-		</section>
-	</main>
+  <!-- Code Example Section -->
+  <div class="w-full max-w-6xl mx-auto px-6 py-16">
+    <div class="flex flex-col md:flex-row gap-12 items-center">
+      <div class="w-full md:w-1/2">
+        <h2 class="font-display text-3xl font-bold mb-6">See What Your Tests Are Missing</h2>
+        <p class="mb-6">Our engine automatically creates variants of your code ("mutants") that should cause tests to fail. If they don't, we've found a gap in your test coverage.</p>
+        <ul class="space-y-4">
+          <li class="flex items-start">
+            <svg class="h-6 w-6 text-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Identifies tests that aren't asserting what you think</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="h-6 w-6 text-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Reveals logic errors that unit tests overlook</span>
+          </li>
+          <li class="flex items-start">
+            <svg class="h-6 w-6 text-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Quantifies the true effectiveness of your test suite</span>
+          </li>
+        </ul>
+      </div>
+      <div class="w-full md:w-1/2 rounded-lg border border-ash bg-slate/50 p-1">
+        <div class="rounded bg-charcoal p-4 font-mono text-sm overflow-hidden">
+          <div class="flex text-ash mb-2">
+            <span class="mr-2">// Original code</span>
+          </div>
+          <pre class="text-white"><code>function calculateDiscount(total, isVIP) {'{'}
+  if (total {'>'} 100 && isVIP) {'{'}
+    return total * 0.15;
+  {'}'} else if (total {'>'} 100) {'{'}
+    return total * 0.10;
+  {'}'}
+  return 0;
+{'}'}</code></pre>
+          
+          <div class="flex text-ash mt-6 mb-2">
+            <span class="text-orange mr-2">// Mutant #3 (survived your tests!)</span>
+          </div>
+          <pre class="text-white"><code>function calculateDiscount(total, isVIP) {'{'} 
+  if (total {'>'} 100 && isVIP) {'{'} 
+    return total * 0.15;
+  {'}'} else if (total {'>'} 100) {'{'} 
+    return total * <span class="bg-orange/20 text-orange px-1">0.05</span>;
+  {'}'}
+  return 0;
+{'}'}</code></pre>
+        </div>
+      </div>
+    </div>
+  </div>
 
-	<a href="https://astro.build/blog/astro-5/" id="news" class="box">
-		<svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg"
-			><path
-				d="M24.667 12c1.333 1.414 2 3.192 2 5.334 0 4.62-4.934 5.7-7.334 12C18.444 28.567 18 27.456 18 26c0-4.642 6.667-7.053 6.667-14Zm-5.334-5.333c1.6 1.65 2.4 3.43 2.4 5.333 0 6.602-8.06 7.59-6.4 17.334C13.111 27.787 12 25.564 12 22.666c0-4.434 7.333-8 7.333-16Zm-6-5.333C15.111 3.555 16 5.556 16 7.333c0 8.333-11.333 10.962-5.333 22-3.488-.774-6-4-6-8 0-8.667 8.666-10 8.666-20Z"
-				fill="#111827"></path></svg
-		>
-		<h2>What's New in Astro 5.0?</h2>
-		<p>
-			From content layers to server islands, click to learn more about the new features and
-			improvements in Astro 5.0
-		</p>
-	</a>
+  <!-- Stats Section -->
+  <div class="w-full bg-slate/30 py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-center font-display text-3xl font-bold mb-16">Trusted by QA Teams Worldwide</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div class="text-center">
+          <div class="text-5xl font-bold text-orange mb-3">93%</div>
+          <p class="text-ash">Average improvement in test coverage quality</p>
+        </div>
+        <div class="text-center">
+          <div class="text-5xl font-bold text-orange mb-3">75%</div>
+          <p class="text-ash">Reduction in escaped production bugs</p>
+        </div>
+        <div class="text-center">
+          <div class="text-5xl font-bold text-orange mb-3">46%</div>
+          <p class="text-ash">Less time spent debugging failed tests</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Grid -->
+  <div class="w-full max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-center font-display text-3xl font-bold mb-6">Powerful Features for Modern Testing Teams</h2>
+    <p class="text-center text-xl max-w-3xl mx-auto mb-16">MutationQA integrates seamlessly with your existing workflow while providing deep insights into test quality.</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="group p-6 rounded-lg border border-ash hover:border-orange transition-all hover:shadow-md">
+        <div class="h-12 w-12 rounded-full bg-orange/10 flex items-center justify-center mb-5 group-hover:bg-orange/20 transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          </svg>
+        </div>
+        <h3 class="font-display text-xl font-bold mb-3">Smart Mutation Engine</h3>
+        <p class="text-ash">Intelligently creates code variants that target your specific language and frameworks.</p>
+      </div>
+      
+      <div class="group p-6 rounded-lg border border-ash hover:border-orange transition-all hover:shadow-md">
+        <div class="h-12 w-12 rounded-full bg-orange/10 flex items-center justify-center mb-5 group-hover:bg-orange/20 transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+          </svg>
+        </div>
+        <h3 class="font-display text-xl font-bold mb-3">CI/CD Integration</h3>
+        <p class="text-ash">Plugs directly into your build pipeline with GitHub Actions, Jenkins, GitLab CI, and more.</p>
+      </div>
+      
+      <div class="group p-6 rounded-lg border border-ash hover:border-orange transition-all hover:shadow-md">
+        <div class="h-12 w-12 rounded-full bg-orange/10 flex items-center justify-center mb-5 group-hover:bg-orange/20 transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+          </svg>
+        </div>
+        <h3 class="font-display text-xl font-bold mb-3">Coverage Visualization</h3>
+        <p class="text-ash">Interactive heatmaps and reports that pinpoint exactly where tests need improvement.</p>
+      </div>
+      
+      <div class="group p-6 rounded-lg border border-ash hover:border-orange transition-all hover:shadow-md">
+        <div class="h-12 w-12 rounded-full bg-orange/10 flex items-center justify-center mb-5 group-hover:bg-orange/20 transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </div>
+        <h3 class="font-display text-xl font-bold mb-3">Performance Optimized</h3>
+        <p class="text-ash">Distributed processing and smart caching for fast results even on large codebases.</p>
+      </div>
+      
+      <div class="group p-6 rounded-lg border border-ash hover:border-orange transition-all hover:shadow-md">
+        <div class="h-12 w-12 rounded-full bg-orange/10 flex items-center justify-center mb-5 group-hover:bg-orange/20 transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+          </svg>
+        </div>
+        <h3 class="font-display text-xl font-bold mb-3">Team Collaboration</h3>
+        <p class="text-ash">Shared dashboards, custom thresholds, and role-based access for effective teamwork.</p>
+      </div>
+      
+      <div class="group p-6 rounded-lg border border-ash hover:border-orange transition-all hover:shadow-md">
+        <div class="h-12 w-12 rounded-full bg-orange/10 flex items-center justify-center mb-5 group-hover:bg-orange/20 transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+          </svg>
+        </div>
+        <h3 class="font-display text-xl font-bold mb-3">Multi-Language Support</h3>
+        <p class="text-ash">Works with JavaScript, TypeScript, Python, Java, C#, Go, Ruby, and more.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonial Section -->
+  <div class="w-full bg-gradient-to-br from-slate/30 to-charcoal py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="relative">
+        <svg class="absolute top-0 left-0 h-16 w-16 text-orange opacity-20 -translate-x-1/2 -translate-y-1/2" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+        </svg>
+        <div class="text-center pt-10">
+          <p class="text-xl md:text-2xl italic mb-8">"MutationQA found critical gaps in our test suite that had been overlooked for months. Within weeks of implementing their recommendations, our escaped defect rate dropped by 70%. It's now an essential part of our quality assurance process."</p>
+          <div class="flex items-center justify-center space-x-4">
+            <div class="h-14 w-14 rounded-full bg-slate overflow-hidden">
+              <div class="w-full h-full bg-gradient-to-br from-orange to-ember opacity-70"></div>
+            </div>
+            <div class="text-left">
+              <p class="font-medium text-lg">Alex Rodriguez</p>
+              <p class="text-ash">Head of QA, EnterpriseNow</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pricing Tier Hints -->
+  <div class="w-full max-w-6xl mx-auto px-6 py-20">
+    <h2 class="text-center font-display text-3xl font-bold mb-6">Choose Your Path to Quality</h2>
+    <p class="text-center text-xl max-w-3xl mx-auto mb-16">Flexible plans for teams of all sizes, from individual developers to enterprise organizations.</p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="rounded-lg border border-ash overflow-hidden transition-all hover:shadow-lg hover:border-ash/50">
+        <div class="p-6 bg-slate/20">
+          <h3 class="font-display text-xl font-bold mb-2">Developer</h3>
+          <div class="flex items-end">
+            <span class="text-4xl font-bold">$29</span>
+            <span class="text-ash ml-2">/month</span>
+          </div>
+          <p class="text-ash mt-2">For individual developers</p>
+        </div>
+        <div class="p-6">
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Up to 5 projects</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Core mutation testing</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>GitHub integration</span>
+            </li>
+          </ul>
+          <button class="w-full mt-6 rounded-lg bg-transparent py-2 px-6 font-medium border border-ash transition-colors hover:bg-slate active:bg-slate/80 disabled:opacity-50">Get Started</button>
+        </div>
+      </div>
+      
+      <div class="rounded-lg border-2 border-orange overflow-hidden transition-all hover:shadow-lg hover:shadow-orange/10">
+        <div class="absolute -translate-x-1/2 px-4 py-1 font-medium text-sm text-white bg-orange rounded-full -translate-y-1/2">Most Popular</div>
+        <div class="p-6 bg-orange/10">
+          <h3 class="font-display text-xl font-bold mb-2">Team</h3>
+          <div class="flex items-end">
+            <span class="text-4xl font-bold">$89</span>
+            <span class="text-ash ml-2">/month</span>
+          </div>
+          <p class="text-ash mt-2">For growing development teams</p>
+        </div>
+        <div class="p-6">
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Unlimited projects</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Advanced CI/CD integration</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Team dashboards</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Quality threshold alerts</span>
+            </li>
+          </ul>
+          <button class="w-full mt-6 rounded-lg bg-orange py-2 px-6 font-medium text-white transition-colors hover:bg-ember active:bg-ember/80 disabled:opacity-50">Get Started</button>
+        </div>
+      </div>
+      
+      <div class="rounded-lg border border-ash overflow-hidden transition-all hover:shadow-lg hover:border-ash/50">
+        <div class="p-6 bg-slate/20">
+          <h3 class="font-display text-xl font-bold mb-2">Enterprise</h3>
+          <div class="flex items-end">
+            <span class="text-xl font-medium">Custom pricing</span>
+          </div>
+          <p class="text-ash mt-2">For large organizations</p>
+        </div>
+        <div class="p-6">
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Everything in Team plan</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>SSO & advanced security</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+              </svg>
+              <span>Custom integrations</span>
+            </li>
+            <li class="flex items-start">
+              <svg class="h-5 w-5 text-orange mt-0.5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+    </svg>
+              <span>Dedicated support</span>
+            </li>
+          </ul>
+          <button class="w-full mt-6 rounded-lg bg-transparent py-2 px-6 font-medium border border-ash transition-colors hover:bg-slate active:bg-slate/80 disabled:opacity-50">Contact Sales</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Final CTA -->
+  <div class="w-full bg-orange/5 border-t border-orange/20">
+    <div class="max-w-4xl mx-auto text-center py-16 px-6">
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-6">Ready to strengthen your test suite?</h2>
+      <p class="text-xl mb-8">Start uncovering hidden bugs with MutationQA today.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="rounded-lg border border-orange bg-orange py-3 px-8 font-medium text-white transition-all hover:bg-ember hover:shadow-lg hover:shadow-orange/20 active:bg-ember/80 disabled:opacity-50">Start Free Trial</button>
+        <button class="rounded-lg bg-slate/50 backdrop-blur-sm py-3 px-8 font-medium text-ironblue border border-ash/30 transition-all hover:bg-slate hover:border-ash hover:shadow-lg active:bg-slate/80 disabled:opacity-50">Schedule Demo</button>
+      </div>
+    </div>
+  </div>
 </div>
-
-<style>
-	#background {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		filter: blur(100px);
-	}
-
-	#container {
-		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
-		height: 100%;
-	}
-
-	main {
-		height: 100%;
-		display: flex;
-		justify-content: center;
-	}
-
-	#hero {
-		display: flex;
-		align-items: start;
-		flex-direction: column;
-		justify-content: center;
-		padding: 16px;
-	}
-
-	h1 {
-		font-size: 22px;
-		margin-top: 0.25em;
-	}
-
-	#links {
-		display: flex;
-		gap: 16px;
-	}
-
-	#links a {
-		display: flex;
-		align-items: center;
-		padding: 10px 12px;
-		color: #111827;
-		text-decoration: none;
-		transition: color 0.2s;
-	}
-
-	#links a:hover {
-		color: rgb(78, 80, 86);
-	}
-
-	#links a svg {
-		height: 1em;
-		margin-left: 8px;
-	}
-
-	#links a.button {
-		color: white;
-		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
-		box-shadow:
-			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
-			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
-		border-radius: 10px;
-	}
-
-	#links a.button:hover {
-		color: rgb(230, 230, 230);
-		box-shadow: none;
-	}
-
-	pre {
-		font-family:
-			ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
-			monospace;
-		font-weight: normal;
-		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-clip: text;
-		margin: 0;
-	}
-
-	h2 {
-		margin: 0 0 1em;
-		font-weight: normal;
-		color: #111827;
-		font-size: 20px;
-	}
-
-	p {
-		color: #4b5563;
-		font-size: 16px;
-		line-height: 24px;
-		letter-spacing: -0.006em;
-		margin: 0;
-	}
-
-	code {
-		display: inline-block;
-		background:
-			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
-			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
-		border-radius: 8px;
-		border: 1px solid transparent;
-		padding: 6px 8px;
-	}
-
-	.box {
-		padding: 16px;
-		background: rgba(255, 255, 255, 1);
-		border-radius: 16px;
-		border: 1px solid white;
-	}
-
-	#news {
-		position: absolute;
-		bottom: 16px;
-		right: 16px;
-		max-width: 300px;
-		text-decoration: none;
-		transition: background 0.2s;
-		backdrop-filter: blur(50px);
-	}
-
-	#news:hover {
-		background: rgba(255, 255, 255, 0.55);
-	}
-
-	@media screen and (max-height: 368px) {
-		#news {
-			display: none;
-		}
-	}
-
-	@media screen and (max-width: 768px) {
-		#container {
-			display: flex;
-			flex-direction: column;
-		}
-
-		#hero {
-			display: block;
-			padding-top: 10%;
-		}
-
-		#links {
-			flex-wrap: wrap;
-		}
-
-		#links a.button {
-			padding: 14px 18px;
-		}
-
-		#news {
-			right: 16px;
-			left: 16px;
-			bottom: 2.5rem;
-			max-width: 100%;
-		}
-
-		h1 {
-			line-height: 1.5;
-		}
-	}
-</style>

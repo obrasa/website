@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary colors */
+  --color-orange: #E44725;      /* Primary brand orange */
+  --color-ember: #FF5A36;       /* Accent (hover/CTA) */
+  --color-charcoal: #1e2633;    /* Primary dark background */
+  --color-steel: #3C3F41;       /* Secondary dark background */
+  --color-ash: #A8A8A8;         /* Muted text, borders */
+  --color-ironblue: #3D5A6C;    /* Cool contrast (sparingly) */
+  --color-offwhite: #F5F5F5;    /* Light backgrounds */
+  --color-white: #E8E4DD;       /* Text / general */
+  --color-slate: #2A3747;       /* Secondary button hover */
+  
+  /* Fonts */
+  --font-display: "Roboto Condensed", sans-serif;
+}
+
+:root {
+  /* Make color variables globally available */
+  --orange: var(--color-orange);
+  --charcoal: var(--color-charcoal);
+  --white: var(--color-white);
+  /* etc... */
+}

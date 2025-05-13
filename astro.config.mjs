@@ -8,6 +8,5 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()]
   },
-  site: 'https://obrasa.github.io',
-  base: '/website',
+  site: 'https://obrasa.ca',
 });
